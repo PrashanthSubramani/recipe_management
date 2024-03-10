@@ -15,7 +15,7 @@ function withAuthentication(WrappedComponent) {
         } else {
           try {
             const response = await axios.post(
-              `http://localhost:4000`,
+              `https://recipe-management-4886.onrender.com`,
               { token: cookie },
               { withCredentials: true }
             );

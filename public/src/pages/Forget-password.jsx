@@ -29,7 +29,7 @@ export default function ForgetPassword() {
     const handleSubmit = async (e)=>{
         e.preventDefault();
         try{
-            const { data } = await axios.post(`http://localhost:4000/forget-password`,{
+            const { data } = await axios.post(`https://recipe-management-4886.onrender.com/forget-password`,{
                 ...values   
             },{
                 withCredentials: true

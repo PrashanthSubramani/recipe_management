@@ -40,7 +40,7 @@ export default function Register() {
     const handleSubmit = async (e)=>{
         e.preventDefault();
         try{
-            const { data } = await axios.post(`http://localhost:4000/register`,{
+            const { data } = await axios.post(`https://recipe-management-4886.onrender.com/register`,{
                 ...values   
             },{
                 withCredentials: true

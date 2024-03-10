@@ -8,7 +8,7 @@ const initialState = {
     error: ''
 }
 
-const BASE_URL = `http://localhost:4000/`;
+const BASE_URL = `https://recipe-management-4886.onrender.com/`;
 
 
 
@@ -17,7 +17,7 @@ export const getAllRecipe = createAsyncThunk(
     "api/getAllRecipe",
     async (user, { rejectWithValue }) => {
         try {
-            const response = await axios.post(`http://localhost:4000/api/fetch_all_recipe`, {user_id:user});
+            const response = await axios.post(`https://recipe-management-4886.onrender.com/api/fetch_all_recipe`, {user_id:user});
             return response.data;
         } catch (error) {
             return rejectWithValue({ error: 'No recipe Found' });
@@ -66,7 +66,7 @@ export const editRecipe = createAsyncThunk(
                 _id: recipe._id,
             }
 
-            const response = await axios.post(`http://localhost:4000/api/edit_recipe`, form);
+            const response = await axios.post(`https://recipe-management-4886.onrender.com/api/edit_recipe`, form);
 
             return response.data;
 
